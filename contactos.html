@@ -1,56 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - nuestro vivero</title>
-    <link rel="stylesheet" href="style1.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto - Viverobi Verde</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="contactos.html">Contactos</a></li>
-            </ul>
-        </nav>
-        <h1>Vivero bi-verde</h1>
-    </header>
+  <!-- Menú de navegación -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        🌿 Viverobi Verde
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="nosotros.html"><i class="fas fa-leaf"></i> Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="productos.html"><i class="fas fa-seedling"></i> Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contactos.html"><i class="fas fa-envelope"></i> Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <section class="contacto">
-        <h2>Contacto</h2>
-        <p>¡Nos encantaría saber de ti! Si tienes alguna pregunta, inquietud o simplemente quieres saber más sobre nuestros productos, por favor completa el formulario de abajo o usa nuestros datos de contacto.</p>
+  <!-- Header -->
+  <header>
+    <div class="container text-center">
+      <h1>Contacto</h1>
+    </div>
+  </header>
 
-        <div class="informacion-contacto">
-            <h3>Datos de Contacto</h3>
-            <ul>
-                <li><strong>Teléfono:</strong> +123 456 789</li>
-                <li><strong>Correo Electrónico:</strong> contacto@viveronaturalezaverde.com</li>
-                <li><strong>Dirección:</strong> Calle de las Flores, 123, Ciudad Verde, País</li>
+  <!-- Contenido Principal -->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <!-- Información de Contacto -->
+        <div class="col-md-4">
+          <div class="bg-light-custom">
+            <h3 class="text-center" style="color: var(--color-primary);">Información de Contacto</h3>
+            <ul class="list-unstyled mt-4">
+              <li class="mb-3">
+                <i class="fas fa-map-marker-alt text-success me-2"></i>
+                Calle de las Flores, 123, Ciudad Verde, País
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-phone text-success me-2"></i>
+                +123 456 789
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-envelope text-success me-2"></i>
+                contacto@viveronaturalezaverde.com
+              </li>
             </ul>
+          </div>
         </div>
 
-        <div class="formulario-contacto">
-            <h3>Envíanos un Mensaje</h3>
+        <!-- Formulario de Contacto -->
+        <div class="col-md-8">
+          <div class="contact-form">
+            <h3 class="text-center mb-4" style="color: var(--color-primary);">Envíanos un Mensaje</h3>
             <form action="enviar_contacto.php" method="POST">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-                <button type="submit">Enviar Mensaje</button>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                </div>
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-custom">Enviar Mensaje</button>
+              </div>
             </form>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Vivero Naturaleza Verde. Todos los derechos reservados.</p>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Viverobi Verde</h4>
+          <p>Tu vivero de confianza para todas tus necesidades de jardinería.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Enlaces Rápidos</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Síguenos</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

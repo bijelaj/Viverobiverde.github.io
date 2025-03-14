@@ -9,57 +9,206 @@
   <!-- Google Fonts (opcional) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
+    :root {
+      --color-primary: #2d5a27;     /* Verde oscuro */
+      --color-secondary: #4a8b3d;   /* Verde medio */
+      --color-accent: #92c582;      /* Verde claro */
+      --color-earth: #8b6244;       /* Marrón tierra */
+      --color-light: #f4f8f2;       /* Verde muy claro para fondos */
+      --color-text: #333333;        /* Texto oscuro */
+    }
+    
     body {
-      background-color: #f4f4f9;
+      background-color: var(--color-light);
       font-family: 'Montserrat', sans-serif;
+      color: var(--color-text);
     }
-    /* Menú dinámico y sticky */
-    .navbar {
-      background-color: #2ecc71; /* tono verde */
-    }
-    .navbar-nav .nav-link {
-      color: #fff;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    .navbar-nav .nav-link:hover {
-      color: #e0e0e0;
-    }
+
     /* Header con imagen de fondo */
     header {
-      background: url('https://via.placeholder.com/1200x400?text=Header+Image') no-repeat center center/cover;
-      height: 400px;
+      background-image: url('imagenes/0j0MJv0EV8M8ouH6ffYP4A4TD5MbS93p8RC4Av6cR-k=_plaintext_638752650741605275.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 100px 0;
+      margin-bottom: 2rem;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    header .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    header .lead {
+      color: white;
+      font-size: 1.4rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Menú dinámico y sticky */
+    .navbar {
+      background-color: var(--color-primary);
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .navbar-brand {
+      color: white !important;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-weight: 500;
+      padding: 0.5rem 1.2rem;
+      margin: 0 0.2rem;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      background-color: var(--color-secondary);
+      color: white !important;
+    }
+
+    /* Secciones de contenido */
+    .section {
+      padding: 70px 0;
+    }
+
+    .section h2 {
+      color: var(--color-primary);
+      font-weight: 600;
+      margin-bottom: 2rem;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--color-accent);
+    }
+
+    .bg-light-custom {
+      background-color: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      padding: 2rem;
+      margin: 1rem 0;
+    }
+
+    /* Carousel mejoras */
+    .carousel {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .carousel-item img {
+      object-fit: cover;
+      height: 500px;
+      width: 100%;
+    }
+
+    .carousel-caption {
+      background: rgba(45, 90, 39, 0.7);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    /* Botones personalizados */
+    .btn-custom {
+      background-color: var(--color-secondary);
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: var(--color-primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: var(--color-primary) !important;
+    }
+
+    footer a {
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-links a {
+      color: white;
+      background-color: var(--color-secondary);
+      width: 35px;
+      height: 35px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      border-radius: 50%;
+      transition: all 0.3s ease;
     }
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    /* Sección con carrusel */
-    .carousel-item img {
-      object-fit: cover;
-      height: 400px;
-      width: 100%;
-    }
-    /* Secciones de contenido */
-    .section {
-      padding: 50px 0;
-    }
-    .bg-light-custom {
-      background-color: #fafafa;
+
+    .social-links a:hover {
+      background-color: var(--color-accent);
+      transform: translateY(-2px);
     }
   </style>
 </head>
 <body>
   <!-- Menú de navegación -->
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Viverobi Verde</a>
+      <a class="navbar-brand" href="index.html">
+        🌿 Viverobi Verde
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -67,16 +216,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Inicio</a>
+            <a class="nav-link active" href="index.html"><i class="fas fa-home"></i> Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">Acerca</a>
+            <a class="nav-link" href="nosotros.html"><i class="fas fa-leaf"></i> Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#gallery">Galería</a>
+            <a class="nav-link" href="productos.html"><i class="fas fa-seedling"></i> Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contacto</a>
+            <a class="nav-link" href="contactos.html"><i class="fas fa-envelope"></i> Contacto</a>
           </li>
         </ul>
       </div>
@@ -87,6 +236,7 @@
   <header>
     <div class="container text-center">
       <h1>Bienvenidos a Viverobi Verde</h1>
+      <p class="lead text-white">Tu vivero de confianza con la mejor selección de plantas y flores. Descubre la magia de la naturaleza con nosotros.</p>
     </div>
   </header>
 
@@ -102,13 +252,13 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://via.placeholder.com/1200x400?text=Imagen+1" class="d-block w-100" alt="Imagen 1">
+            <img src="imagenes/0j0MJv0EV8M8ouH6ffYP4A4TD5MbS93p8RC4Av6cR-k=_plaintext_638752650741605275.jpg" class="d-block w-100" alt="Plantas y flores">
           </div>
           <div class="carousel-item">
-            <img src="https://via.placeholder.com/1200x400?text=Imagen+2" class="d-block w-100" alt="Imagen 2">
+            <img src="imagenes/S8RtCu3cU2wBuGWbl8ERMsNi2Ff5C7hctbcq7kMkRiM=_plaintext_638752650742227583.jpg" class="d-block w-100" alt="Jardín y plantas">
           </div>
           <div class="carousel-item">
-            <img src="https://via.placeholder.com/1200x400?text=Imagen+3" class="d-block w-100" alt="Imagen 3">
+            <img src="imagenes/aUzfMwVsMB7UmOLM_1OT_TOFEJUZh-AacqvjXWW7Je0=_plaintext_638752650742508103.jpg" class="d-block w-100" alt="Variedad de plantas">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
@@ -123,22 +273,34 @@
     </div>
   </section>
 
-  <!-- Sección Acerca -->
-  <section id="about" class="section bg-light-custom">
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-5">
     <div class="container">
-      <h2 class="text-center mb-4">Acerca de Nosotros</h2>
-      <p class="text-center">Aquí puedes incluir información sobre la filosofía de Viverobi Verde, lo que nos inspira y nuestro compromiso con un ambiente vibrante y natural.</p>
+      <div class="row">
+        <div class="col-md-4">
+          <h4>🌿 Viverobi Verde</h4>
+          <p>Tu vivero de confianza para todas tus necesidades de jardinería.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Enlaces Rápidos</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Síguenos</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <!-- Sección Contacto -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="text-center mb-4">Contacto</h2>
-      <p class="text-center">¡Contáctanos para más información y para formar parte de nuestro mundo verde!</p>
-      <!-- Aquí puedes insertar un formulario de contacto -->
-    </div>
-  </section>
+  </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,192 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos - nuestro vivero</title>
-    <link rel="stylesheet" href="style1.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productos - Viverobi Verde</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="contactos.html">Contactos</a></li>
-            </ul>
-        </nav>
-        <h1>Vivero bi-verde</h1>
-    </header>
+  <!-- Menú de navegación -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        Viverobi Verde
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="nosotros.html"><i class="fas fa-leaf"></i> Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="productos.html"><i class="fas fa-seedling"></i> Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactos.html"><i class="fas fa-envelope"></i> Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <section class="productos">
-        <h2>Productos Disponibles</h2>
+  <!-- Header -->
+  <header>
+    <div class="container text-center">
+      <h1>Nuestros Productos</h1>
+    </div>
+  </header>
 
-        <div class="productos-lista">
-            <!-- Producto 1 -->
-            <div class="producto">
-                <img src="imagenes/yIL2T-wxN0Hqp8HsxDNMfSO6qlNqc2awl_juCJvauqc=_plaintext_638752650741605275.jpg" alt="Planta 1">
-                <h3>Planta de Interior</h3>
-                <p>Planta ideal para el interior de tu hogar, fácil de cuidar.</p>
-                <p class="precio">$10.00</p>
+  <!-- Productos -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center mb-5">Catálogo de Plantas</h2>
+      
+      <div class="row">
+        <!-- Producto 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="product-card">
+            <img src="imagenes/0j0MJv0EV8M8ouH6ffYP4A4TD5MbS93p8RC4Av6cR-k=_plaintext_638752650741605275.jpg" alt="Planta Interior">
+            <div class="card-body">
+              <h3>Plantas de Interior</h3>
+              <p>Perfectas para decorar y purificar el aire de tu hogar.</p>
+              <button class="btn btn-custom">Ver más</button>
             </div>
-
-            <!-- Producto 2 -->
-            <div class="producto">
-                <img src="plant2.jpg" alt="Planta 2">
-                <h3>Orquídea Rosa</h3>
-                <p>Orquídea hermosa para decorar tu espacio.</p>
-                <p class="precio">$15.00</p>
-            </div>
-
-            <!-- Producto 3 -->
-            <div class="producto">
-                <img src="plant3.jpg" alt="Planta 3">
-                <h3>Cactus</h3>
-                <p>Perfecto para lugares con poca humedad.</p>
-                <p class="precio">$8.00</p>
-            </div>
-
-            <!-- Producto 4 -->
-            <div class="producto">
-                <img src="plant4.jpg" alt="Planta 4">
-                <h3>Planta Exótica</h3>
-                <p>Una planta única para darle un toque especial a tu jardín.</p>
-                <p class="precio">$20.00</p>
-            </div>
-
-            <!-- Producto 5 -->
-            <div class="producto">
-                <img src="plant5.jpg" alt="Planta 5">
-                <h3>Ficus</h3>
-                <p>Una planta resistente y fácil de mantener.</p>
-                <p class="precio">$12.00</p>
-            </div>
-
-            <!-- Producto 6 -->
-            <div class="producto">
-                <img src="plant6.jpg" alt="Planta 6">
-                <h3>Flor de Loto</h3>
-                <p>Una flor que simboliza paz y tranquilidad.</p>
-                <p class="precio">$18.00</p>
-            </div>
-
-            <!-- Producto 7 -->
-            <div class="producto">
-                <img src="plant7.jpg" alt="Planta 7">
-                <h3>Pachira Aquatica</h3>
-                <p>Ideal para interiores y para purificar el aire.</p>
-                <p class="precio">$14.00</p>
-            </div>
-
-            <!-- Producto 8 -->
-            <div class="producto">
-                <img src="plant8.jpg" alt="Planta 8">
-                <h3>Jazmín</h3>
-                <p>Con su fragancia dulce, es perfecta para tu jardín.</p>
-                <p class="precio">$10.00</p>
-            </div>
-
-            <!-- Producto 9 -->
-            <div class="producto">
-                <img src="plant9.jpg" alt="Planta 9">
-                <h3>Anturio Rojo</h3>
-                <p>Una flor vibrante para darle color a cualquier espacio.</p>
-                <p class="precio">$13.00</p>
-            </div>
-
-            <!-- Producto 10 -->
-            <div class="producto">
-                <img src="plant10.jpg" alt="Planta 10">
-                <h3>Palma de Sable</h3>
-                <p>Ideal para ambientes cálidos y luminosos.</p>
-                <p class="precio">$25.00</p>
-            </div>
-
-            <!-- Producto 11 -->
-            <div class="producto">
-                <img src="plant11.jpg" alt="Planta 11">
-                <h3>Lavanda</h3>
-                <p>Una planta aromática que perfuma naturalmente.</p>
-                <p class="precio">$7.00</p>
-            </div>
-
-            <!-- Producto 12 -->
-            <div class="producto">
-                <img src="plant12.jpg" alt="Planta 12">
-                <h3>Rosa de Jericó</h3>
-                <p>Una planta resistente que revive con agua.</p>
-                <p class="precio">$5.00</p>
-            </div>
-
-            <!-- Producto 13 -->
-            <div class="producto">
-                <img src="plant13.jpg" alt="Planta 13">
-                <h3>Fresia</h3>
-                <p>Una flor que ilumina cualquier espacio con su belleza.</p>
-                <p class="precio">$9.00</p>
-            </div>
-
-            <!-- Producto 14 -->
-            <div class="producto">
-                <img src="plant14.jpg" alt="Planta 14">
-                <h3>Hiedra</h3>
-                <p>Una planta trepadora perfecta para decorar muros.</p>
-                <p class="precio">$6.00</p>
-            </div>
-
-            <!-- Producto 15 -->
-            <div class="producto">
-                <img src="plant15.jpg" alt="Planta 15">
-                <h3>Albahaca</h3>
-                <p>Ideal para jardines y como hierba aromática en la cocina.</p>
-                <p class="precio">$4.00</p>
-            </div>
-
-            <!-- Producto 16 -->
-            <div class="producto">
-                <img src="plant16.jpg" alt="Planta 16">
-                <h3>Geranios</h3>
-                <p>Una planta popular por sus colores vibrantes.</p>
-                <p class="precio">$8.00</p>
-            </div>
-
-            <!-- Producto 17 -->
-            <div class="producto">
-                <img src="plant17.jpg" alt="Planta 17">
-                <h3>Violetas Africanas</h3>
-                <p>Planta pequeña con flores delicadas y coloridas.</p>
-                <p class="precio">$11.00</p>
-            </div>
-
-            <!-- Producto 18 -->
-            <div class="producto">
-                <img src="plant18.jpg" alt="Planta 18">
-                <h3>Girasol</h3>
-                <p>Una flor que simboliza la alegría y la luz del sol.</p>
-                <p class="precio">$15.00</p>
-            </div>
-
-            <!-- Producto 19 -->
-            <div class="producto">
-                <img src="plant19.jpg" alt="Planta 19">
-                <h3>Begonias</h3>
-                <p>Perfectas para interiores con poca luz.</p>
-                <p class="precio">$12.00</p>
-            </div>
-
-            <!-- Producto 20 -->
-            <div class="producto">
-                <img src="plant20.jpg" alt="Planta 20">
-                <h3>Camelia</h3>
-                <p>Una flor que da un toque elegante a cualquier espacio.</p>
-                <p class="precio">$18.00</p>
-            </div>
+          </div>
         </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2025 Vivero Naturaleza Verde. Todos los derechos reservados.</p>
-    </footer>
+        <!-- Producto 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="product-card">
+            <img src="imagenes/S8RtCu3cU2wBuGWbl8ERMsNi2Ff5C7hctbcq7kMkRiM=_plaintext_638752650742227583.jpg" alt="Planta Exterior">
+            <div class="card-body">
+              <h3>Plantas de Exterior</h3>
+              <p>Ideales para jardines y espacios al aire libre.</p>
+              <button class="btn btn-custom">Ver más</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="product-card">
+            <img src="imagenes/aUzfMwVsMB7UmOLM_1OT_TOFEJUZh-AacqvjXWW7Je0=_plaintext_638752650742508103.jpg" alt="Suculentas">
+            <div class="card-body">
+              <h3>Suculentas</h3>
+              <p>Plantas resistentes y de fácil cuidado.</p>
+              <button class="btn btn-custom">Ver más</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="product-card">
+            <img src="imagenes/utKPb4GTlMIkUcVa8FofkPUA7qKT21JtI4xgOcfkhpk=_plaintext_638752650741605275.jpg" alt="Flores">
+            <div class="card-body">
+              <h3>Flores Ornamentales</h3>
+              <p>Dale color y vida a tus espacios.</p>
+              <button class="btn btn-custom">Ver más</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="product-card">
+            <img src="imagenes/lrHXcCk6YSUf9KCy5MkIHosNl2XjLVyHQhK7sw_YSTQ=_plaintext_638752650741605275.jpg" alt="Herramientas">
+            <div class="card-body">
+              <h3>Herramientas de Jardín</h3>
+              <p>Todo lo necesario para el cuidado de tus plantas.</p>
+              <button class="btn btn-custom">Ver más</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="product-card">
+            <img src="imagenes/yIL2T-wxN0Hqp8HsxDNMfSO6qlNqc2awl_juCJvauqc=_plaintext_638752650741605275.jpg" alt="Macetas">
+            <div class="card-body">
+              <h3>Macetas y Contenedores</h3>
+              <p>Variedad de estilos y tamaños para tus plantas.</p>
+              <button class="btn btn-custom">Ver más</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Viverobi Verde</h4>
+          <p>Tu vivero de confianza para todas tus necesidades de jardinería.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Enlaces Rápidos</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Síguenos</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
